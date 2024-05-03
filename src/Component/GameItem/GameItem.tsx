@@ -1,18 +1,20 @@
 import React from 'react'
 import "./GameItem.css"
+import { gameItem } from '../../game';
 
 interface Props  {
-    name : string;
-    hasSettings : boolean;
-    hasModes : boolean;
+    gameList : gameItem;
+    key:string;
 }
 
-const GameItem: React.FC<Props> = ({name, hasSettings,hasModes} : Props) : JSX.Element=> {
+const GameItem: React.FC<Props> = ({gameList, key }: Props) : JSX.Element=> {
+
+
   return (
-    <div className="game">
+    <div className="game" id={key}>
         <div className="info">
-            <h3>Card {name}</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magnam accusantium est veritatis alias atque inventore saepe, deleniti debitis excepturi laudantium eligendi sed voluptatibus velit natus molestiae aliquid beatae eveniet?</p>
+            <h3>Card- {gameList.name}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         </div>
     </div>
   )
