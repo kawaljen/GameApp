@@ -7,7 +7,7 @@ interface Props  {
     
 };
 
-const Play: React.FC<Props> = ({handleChange, onClick, play}: Props) :JSX.Element=> {
+const Mastermind: React.FC<Props> = ({handleChange, onClick, play}: Props) :JSX.Element=> {
 
     return (
         <div>
@@ -17,4 +17,4 @@ const Play: React.FC<Props> = ({handleChange, onClick, play}: Props) :JSX.Elemen
     )
 }
 
-export default Play
+export default Mastermind

@@ -2,12 +2,12 @@ import axios from "axios"
 
 
 const api ="http://localhost:5190/api/play/" 
-type userInput = {
+interface userInput  {
     guess : string;
     message:string;
 }
 
-export const playAPI = async (guess:string)=>{
+export const JeuPlusMoinsPlayAPI = async (guess:string)=>{
     try{
         const data = await axios.get<userInput>(api+guess)
         return data;

@@ -12,14 +12,11 @@ const GameList: React.FC<Props> = ({gameList}: Props):JSX.Element => {
   
   return <>
 
-      { gameList.length>0? (
+      { 
         gameList.map((item )=>{
           return <GameItem key={uuidv4()} gameList={item}/>
         })
-      ):(
-        <p>No games available</p>
-
-      )}
+     }
 
       
   </>;
