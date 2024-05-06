@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-const api ="http://localhost:5190/api/play/" 
+const api ="http://localhost:5190/api/v0/play/" 
 interface userInput  {
     guess : string;
     message:string;

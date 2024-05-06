@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-const api ="http://localhost:5190/api/mainmenu" 
+const api ="http://localhost:5190/api/v0/mainmenu" 
 
 export const gameMenuAPI = async ()=>{
     try{
