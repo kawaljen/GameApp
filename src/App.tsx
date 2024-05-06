@@ -19,11 +19,13 @@ function App() {
 
   const onClick = async (e:React.MouseEvent<HTMLButtonElement>)=>{
       const result = await playAPI(play)
+      console.log(typeof result)
       if (typeof result === "string"){
         setServerError(result)
       }
-      else if (Array.isArray(result.data)){
+      else if (Array.isArray(result.data)){ //objet
         setResult(result.data.message);
+        console.log(result.data)
       }
       
   }
