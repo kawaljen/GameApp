@@ -10,3 +10,10 @@ export interface gameItem{
     gameStarted:boolean,
 
   }
+
+  export interface GameSettings{
+    nbGuesses : number,
+    nbCases :number,
+    nbColors :number,
+
+  }
