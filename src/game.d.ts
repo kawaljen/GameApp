@@ -3,4 +3,10 @@ export interface gameItem{
     name:string,
 
   }
-  
+  export interface GameMenuItem{
+    name:string,
+    hasSettings:boolean,
+    hasModes:boolean,
+    gameStarted:boolean,
+
+  }

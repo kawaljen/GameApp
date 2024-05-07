@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { gameMenuAPI } from '../../Services/GameMenuService';
+import { appGameMenuAPI } from '../../Services/AppGameMenuService';
 import { gameItem } from '../../game';
 import GameList from '../../Component/GameList/GameList';
 
@@ -10,7 +10,7 @@ const HomePage = (props: Props) => {
   const [serverError, setServerError] = useState<string|null>(null);
   useEffect(()=>{
      const getResult =  async() =>{
-          const result = await gameMenuAPI()
+          const result = await appGameMenuAPI()
           console.log(result)
           if (typeof result === "string"){
             setServerError(result)

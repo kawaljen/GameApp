@@ -1,15 +1,11 @@
 import axios from "axios"
 
 
-const api ="http://localhost:5190/api/v0/mastermind/play/" 
-interface userInput  {
-    guess : string;
-    message:string;
-}
+const api ="http://localhost:5190/api/v0/mastermind/menu" 
 
-export const MastermindPlayAPI = async (guess:string)=>{
+export const gameMenuAPI = async ()=>{
     try{
-        const data = await axios.get<userInput>(api+guess)
+        const data = await axios.get(api );
         return data;
     }
     catch (error){
@@ -18,7 +14,7 @@ export const MastermindPlayAPI = async (guess:string)=>{
             return error.message;
         }
         else{
-            console.log("unexpected error ", error)
+            console.log("inexpected error ", error)
             return "an unexpected error has occured";
         }
     }
